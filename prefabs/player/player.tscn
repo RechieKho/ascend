@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://graphics/player/body.png" type="Texture" id=1]
 [ext_resource path="res://graphics/player/shell.png" type="Texture" id=2]
@@ -14,6 +14,86 @@
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 29.0
 height = 44.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "IDLE"
+loop = true
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Graphics/Body/Head:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0833333, 0.333333, 0.583333, 0.833333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -65 ), Vector2( 0, -62 ), Vector2( 0, -65 ), Vector2( 0, -67 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Graphics/Body:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -3 ), Vector2( 0, 0 ), Vector2( 0, 3 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Graphics/Staff:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 26, 8 ), Vector2( 26, 12 ), Vector2( 26, 8 ), Vector2( 26, 3.99999 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Graphics/Body/Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -65 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Graphics/Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Graphics/Staff:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 26, 8 ) ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 
@@ -46,26 +126,26 @@ texture = ExtResource( 2 )
 z_index = -1
 texture = ExtResource( 6 )
 
-[node name="Pelvis" type="Node2D" parent="Graphics/Body"]
+[node name="Pelvis" type="Node2D" parent="Graphics"]
 show_behind_parent = true
 position = Vector2( 0, 26 )
 
-[node name="RightLeg" type="Sprite" parent="Graphics/Body/Pelvis"]
+[node name="RightLeg" type="Sprite" parent="Graphics/Pelvis"]
 position = Vector2( -14, 19.5 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, 20 )
 
-[node name="Silhouette" type="Sprite" parent="Graphics/Body/Pelvis/RightLeg"]
+[node name="Silhouette" type="Sprite" parent="Graphics/Pelvis/RightLeg"]
 z_index = -1
 texture = ExtResource( 8 )
 offset = Vector2( 0, 20 )
 
-[node name="LeftLeg" type="Sprite" parent="Graphics/Body/Pelvis"]
+[node name="LeftLeg" type="Sprite" parent="Graphics/Pelvis"]
 position = Vector2( 17, 19.5 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, 20 )
 
-[node name="Silhouette" type="Sprite" parent="Graphics/Body/Pelvis/LeftLeg"]
+[node name="Silhouette" type="Sprite" parent="Graphics/Pelvis/LeftLeg"]
 z_index = -1
 texture = ExtResource( 8 )
 offset = Vector2( 0, 20 )
@@ -85,5 +165,7 @@ position = Vector2( 0, -51 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/IDLE = SubResource( 2 )
+anims/RESET = SubResource( 3 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
