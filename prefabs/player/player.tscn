@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://graphics/player/body.png" type="Texture" id=1]
 [ext_resource path="res://graphics/player/shell.png" type="Texture" id=2]
@@ -166,6 +166,30 @@ tracks/8/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("Graphics/Body/Head:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Graphics/Staff:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "RUN"
@@ -269,6 +293,96 @@ tracks/7/keys = {
 "values": [ Vector2( 23.333, 3.14872 ), Vector2( 26, 8 ), Vector2( 28.1505, 11.9118 ), Vector2( 26, 8 ), Vector2( 23.333, 3.14872 ), Vector2( 26, 8 ), Vector2( 28.1505, 11.9118 ), Vector2( 26, 8 ) ]
 }
 
+[sub_resource type="Animation" id=5]
+resource_name = "UP"
+length = 0.001
+loop = true
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Graphics:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 9.9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Graphics/Body/Head:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -29.6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Graphics/Pelvis/RightLeg:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -15.7339, 23.4413 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Graphics/Pelvis/RightLeg:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 7.51735 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Graphics/Pelvis/LeftLeg:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15.4458, 15.9694 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Graphics/Pelvis/LeftLeg:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 19.7208 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Graphics/Staff:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 19.7 ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 
 [node name="Graphics" type="Node2D" parent="."]
@@ -326,7 +440,6 @@ offset = Vector2( 0, 20 )
 
 [node name="Staff" type="Sprite" parent="Graphics"]
 position = Vector2( 26, 8 )
-rotation = -0.443314
 texture = ExtResource( 9 )
 
 [node name="Silhouette" type="Sprite" parent="Graphics/Staff"]
@@ -342,5 +455,6 @@ shape = SubResource( 1 )
 anims/IDLE = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 anims/RUN = SubResource( 4 )
+anims/UP = SubResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
