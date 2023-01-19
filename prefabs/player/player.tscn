@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://graphics/player/body.png" type="Texture" id=1]
 [ext_resource path="res://graphics/player/shell.png" type="Texture" id=2]
@@ -94,6 +94,180 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 26, 8 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Graphics:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Graphics:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -51 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Graphics/Pelvis/LeftLeg:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Graphics/Pelvis/LeftLeg:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 17, 19.5 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Graphics/Pelvis/RightLeg:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -14, 19.5 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Graphics/Pelvis/RightLeg:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "RUN"
+length = 0.5
+loop = true
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Graphics:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 28.8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Graphics/Pelvis/LeftLeg:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 27.5489, 17.4173 ), Vector2( 6.08718, 22.6513 ), Vector2( -17.9659, 20.3166 ), Vector2( 4.09235, 10.6504 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Graphics/Pelvis/LeftLeg:rotation_degrees")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -47.1198, 28.8526 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Graphics/Pelvis/RightLeg:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -17.3694, 15.8844 ), Vector2( -0.987665, 8.16174 ), Vector2( 20.628, 21.9008 ), Vector2( 11.1159, 18.8156 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Graphics/Pelvis/RightLeg:rotation_degrees")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 33.9417, -49.527 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Graphics/Body:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1.94351, 5.67651 ), Vector2( 0, 0 ), Vector2( -3.88701, -11.353 ), Vector2( 0, 0 ), Vector2( 1.94351, 5.67651 ), Vector2( 0, 0 ), Vector2( -3.88701, -11.353 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Graphics/Body/Head:position")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.03125, 0.09375, 0.15625, 0.21875, 0.28125, 0.34375, 0.40625, 0.46875 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -65 ), Vector2( 2.42794, -57.9086 ), Vector2( 0, -65 ), Vector2( -1.09467, -68.1972 ), Vector2( 0, -65 ), Vector2( 2.42794, -57.9086 ), Vector2( 0, -65 ), Vector2( -1.09467, -68.1972 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Graphics/Staff:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.03125, 0.09375, 0.15625, 0.21875, 0.28125, 0.34375, 0.40625, 0.46875 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 23.333, 3.14872 ), Vector2( 26, 8 ), Vector2( 28.1505, 11.9118 ), Vector2( 26, 8 ), Vector2( 23.333, 3.14872 ), Vector2( 26, 8 ), Vector2( 28.1505, 11.9118 ), Vector2( 26, 8 ) ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 
@@ -130,22 +304,22 @@ texture = ExtResource( 6 )
 show_behind_parent = true
 position = Vector2( 0, 26 )
 
-[node name="RightLeg" type="Sprite" parent="Graphics/Pelvis"]
-position = Vector2( -14, 19.5 )
-texture = ExtResource( 3 )
-offset = Vector2( 0, 20 )
-
-[node name="Silhouette" type="Sprite" parent="Graphics/Pelvis/RightLeg"]
-z_index = -1
-texture = ExtResource( 8 )
-offset = Vector2( 0, 20 )
-
 [node name="LeftLeg" type="Sprite" parent="Graphics/Pelvis"]
 position = Vector2( 17, 19.5 )
 texture = ExtResource( 3 )
 offset = Vector2( 0, 20 )
 
 [node name="Silhouette" type="Sprite" parent="Graphics/Pelvis/LeftLeg"]
+z_index = -1
+texture = ExtResource( 8 )
+offset = Vector2( 0, 20 )
+
+[node name="RightLeg" type="Sprite" parent="Graphics/Pelvis"]
+position = Vector2( -14, 19.5 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, 20 )
+
+[node name="Silhouette" type="Sprite" parent="Graphics/Pelvis/RightLeg"]
 z_index = -1
 texture = ExtResource( 8 )
 offset = Vector2( 0, 20 )
@@ -167,5 +341,6 @@ shape = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/IDLE = SubResource( 2 )
 anims/RESET = SubResource( 3 )
+anims/RUN = SubResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
