@@ -1,2 +1,2 @@
 # Ascend
-Ascend is an open-source metroidvania game that is made in godot.
+Ascend is an maze-generating metroidvania game that is made in godot.
