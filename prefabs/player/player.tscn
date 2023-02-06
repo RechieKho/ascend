@@ -680,7 +680,7 @@ nodes/cast_trigger/position = Vector2( 106.667, 53.3333 )
 nodes/main/node = SubResource( 18 )
 nodes/main/position = Vector2( -133.333, 26.6667 )
 nodes/output/position = Vector2( 320, 106.667 )
-node_connections = [ "cast_trigger", 0, "main", "cast_trigger", 1, "Animation", "output", 0, "cast_trigger" ]
+node_connections = [ "output", 0, "cast_trigger", "cast_trigger", 0, "main", "cast_trigger", 1, "Animation" ]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
