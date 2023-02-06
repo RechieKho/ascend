@@ -1,6 +1,4 @@
-extends Node
-class_name Mana
-
+extends Resource
 
 export(int, 0, 1000) var max_mana := 100
 

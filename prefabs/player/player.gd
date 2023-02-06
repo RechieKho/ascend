@@ -7,13 +7,13 @@ export(float, 0.0, 10000.0) var jump_power := 1500.0
 export(float, 0.0, 1.0) var jump_release_multiplier := 0.5
 export(float, 0.0, 1000.0) var gravity := 100.0
 
+export(Resource) var mana_system
+
 onready var animation_tree := $AnimationTree as AnimationTree
 onready var graphics := $Graphics as Node2D
 
 onready var on_ground_state := $States/OnGround as State
 onready var on_air_state := $States/OnAir as State
-
-onready var mana_system := $Mana as Mana
 
 var current_state: State setget set_current_state
 var linear_velocity: Vector2

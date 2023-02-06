@@ -20,11 +20,6 @@ _global_script_classes=[ {
 "path": "res://scripts/hurtbox.gd"
 }, {
 "base": "Node",
-"class": "Mana",
-"language": "GDScript",
-"path": "res://scripts/mana_system.gd"
-}, {
-"base": "Node",
 "class": "State",
 "language": "GDScript",
 "path": "res://scripts/state.gd"
@@ -32,7 +27,6 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Hitbox": "",
 "Hurtbox": "",
-"Mana": "",
 "State": ""
 }
 

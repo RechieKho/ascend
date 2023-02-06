@@ -13,7 +13,7 @@
 [ext_resource path="res://prefabs/player/player.gd" type="Script" id=11]
 [ext_resource path="res://prefabs/player/on-ground.gd" type="Script" id=12]
 [ext_resource path="res://prefabs/player/on-air.gd" type="Script" id=13]
-[ext_resource path="res://scripts/mana_system.gd" type="Script" id=14]
+[ext_resource path="res://resources/mana_system.tres" type="Resource" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 26.0
@@ -680,13 +680,14 @@ nodes/cast_trigger/position = Vector2( 106.667, 53.3333 )
 nodes/main/node = SubResource( 18 )
 nodes/main/position = Vector2( -133.333, 26.6667 )
 nodes/output/position = Vector2( 320, 106.667 )
-node_connections = [ "output", 0, "cast_trigger", "cast_trigger", 0, "main", "cast_trigger", 1, "Animation" ]
+node_connections = [ "cast_trigger", 0, "main", "cast_trigger", 1, "Animation", "output", 0, "cast_trigger" ]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 0
 script = ExtResource( 11 )
+mana_system = ExtResource( 14 )
 
 [node name="Graphics" type="Node2D" parent="."]
 
@@ -762,9 +763,6 @@ script = ExtResource( 12 )
 
 [node name="OnAir" type="Node" parent="States"]
 script = ExtResource( 13 )
-
-[node name="Mana" type="Node" parent="."]
-script = ExtResource( 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CAST = SubResource( 7 )
