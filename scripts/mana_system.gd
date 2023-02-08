@@ -11,10 +11,10 @@ signal on_mana_changed(new_mana)
 func _ready():
 	connect("on_mana_changed", self, "debug")
 
-func debug(mana):
-	print("player_mana: ", mana)
+func debug(value: int):
+	print("player_mana: ", value)
 
-func set_mana(value):
+func set_mana(value: int):
 	if mana == value: return
-	mana = clamp(value, 0, max_mana)
+	mana = clamp(value, 0, max_mana) as int
 	emit_signal("on_mana_changed", mana)
