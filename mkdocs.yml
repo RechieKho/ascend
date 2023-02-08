@@ -1,4 +1,6 @@
 site_name: Ascend
 nav:
-        - Home: index.md
+  - Home: index.md
+  - Get involved:
+    - Game design document: game-design-document.md
 theme: readthedocs
