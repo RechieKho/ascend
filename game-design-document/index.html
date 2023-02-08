@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Game design document - Ascend</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Game design document";
+        var mkdocs_page_input_path = "game-design-document.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Ascend
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Get involved</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Game design document</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#gameplay-mechanics">Gameplay / Mechanics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#levels">Levels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#players-control">Player's control</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#health">Health</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mana">Mana</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#skills">Skills</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Ascend</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Get involved &raquo;</li>
+      <li>Game design document</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="game-design-document">Game Design Document</h1>
+<p>As the one-line description said, it is a maze-generating metroidvania game.</p>
+<p>It is about a tortoise wanderers travel across the vast, never-ending world,
+in search of honing its skill to the extreme. The game will be a randomized 
+metroidvania, or roguelike that never resets, mixing of generated levels and
+exploration &amp; progression. This game is currently targeted to be a <em>desktop</em>,
+<em>singleplayer</em> game (no multiplayer, no multiplatform yet; go away feature
+freaks).</p>
+<h3 id="gameplay-mechanics">Gameplay / Mechanics</h3>
+<h4 id="levels">Levels</h4>
+<p>The game composes of infinite number of generated level. Each level has its own 
+biome and unique enemies. In a level, there will be a boss enemy for the player 
+to defeat in order to proceed to the next level. The map of the level will be 
+vast so the player will need to venture and explore the terrain to hunt down the 
+boss enemy. </p>
+<h4 id="players-control">Player's control</h4>
+<p>The player can move like a normal 2D platformer (walks left &amp; right, single
+jump). The player can also do basic attack for all 4 direction (up, down, left
+and right). Hitting enemies, projectiles and some terrain downward sends the 
+player upward.</p>
+<h4 id="health">Health</h4>
+<p>The player will have interger amount of health and damage received will cost 1
+to 3 health depending on the damage. The player can use mana to restore health
+through focusing.</p>
+<p>Since the levels are vast, there will be checkpoints scattered across the level.
+On death, player will be respawned to the last checkpoint.</p>
+<h4 id="mana">Mana</h4>
+<p>Hitting enemies or some special object gains mana. The player will no longer receive
+mana if the mana is maxed out. </p>
+<h4 id="skills">Skills</h4>
+<p>For each level passed, the player will grant a new skill. There will have a
+skill system in which the player can defines its moveset (or skill set) from the
+list of skills acquired from defeating bosses. Each skill will have its own
+cooldown and mana cost. The player can only edit moveset at the checkpoints.</p>
+<p>If you have any uncertainty or suggestion, please <a href="https://github.com/RechieKho/ascend/issues">open an issue</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
