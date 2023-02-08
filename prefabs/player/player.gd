@@ -9,6 +9,7 @@ export(float, 0.0, 1000.0) var gravity := 100.0
 
 onready var animation_tree := $AnimationTree as AnimationTree
 onready var graphics := $Graphics as Node2D
+onready var listener := $Listener2D as Listener2D
 
 onready var on_ground_state := $States/OnGround as State
 onready var on_air_state := $States/OnAir as State
