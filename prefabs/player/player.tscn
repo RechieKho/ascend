@@ -797,3 +797,5 @@ parameters/cast_trigger/active = false
 parameters/main/playback = SubResource( 20 )
 parameters/main/air/blend_position = 0.170034
 parameters/main/ground/blend_position = 0.00168347
+
+[node name="Listener2D" type="Listener2D" parent="."]
