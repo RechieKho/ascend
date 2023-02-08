@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "Health",
-"language": "GDScript",
-"path": "res://scripts/health_system.gd"
-}, {
 "base": "Area2D",
 "class": "Hitbox",
 "language": "GDScript",
@@ -35,7 +30,6 @@ _global_script_classes=[ {
 "path": "res://scripts/state.gd"
 } ]
 _global_script_class_icons={
-"Health": "",
 "Hitbox": "",
 "Hurtbox": "",
 "Mana": "",
