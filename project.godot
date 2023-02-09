@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "Hurtbox",
 "language": "GDScript",
-"path": "res://scripts/hurtbox.gd"
+"path": "res://prefabs/hurtbox/hurtbox.gd"
 }, {
 "base": "Node",
 "class": "Mana",
