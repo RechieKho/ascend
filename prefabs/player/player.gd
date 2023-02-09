@@ -14,7 +14,9 @@ onready var listener := $Listener2D as Listener2D
 onready var on_ground_state := $States/OnGround as State
 onready var on_air_state := $States/OnAir as State
 
+onready var hitbox := $Hitbox as Hitbox
 onready var mana_system := $Mana as Mana
+
 
 var current_state: State setget set_current_state
 var linear_velocity: Vector2
