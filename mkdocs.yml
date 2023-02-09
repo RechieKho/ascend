@@ -3,4 +3,5 @@ nav:
   - Home: index.md
   - Get involved:
     - Game design document: game-design-document.md
+    - Stuffs to know to contribute: contribute.md
 theme: readthedocs
