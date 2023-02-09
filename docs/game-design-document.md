@@ -18,7 +18,7 @@ vast so the player will need to venture and explore the terrain to hunt down the
 boss enemy. 
 
 #### Player's control
-Initially, there will be keys bind to these inputs:
+There will be keys bind to these inputs:
 
 - `Left`
 - `Right`
@@ -38,11 +38,11 @@ When editing moveset, the player can bind to these keys (combination):
 - `Down` + `Skill Cast N`
 - `Dash` + `Skill Cast N`
 
-Where N in `Skill Cast N` is either `1` or `2`. The rest of the keys (combination) will
-be reserved and cannot be bind to any skill (for instances, `Left` key will only move to left).
+Where `N` in `Skill Cast N` is either `1` or `2`. The rest of the keys (combination) cannot 
+be bind to any skill.
 
 The player can move like a normal 2D platformer (walks left & right using `Left` &
-right key, single jump with `Jump` key):
+`Right` key, single jump with `Jump` key):
 
 - Walk to left (`Left` key)
 - Walk to right (`Right` key)
