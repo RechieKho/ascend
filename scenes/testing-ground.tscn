@@ -16,8 +16,3 @@ shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 341, 308 )
-walk_lerp_weight = 0.5
-speed = 500.0
-jump_power = 1500.0
-jump_release_multiplier = 0.5
-gravity = 100.0
