@@ -15,10 +15,10 @@
 [ext_resource path="res://prefabs/player/on-air.gd" type="Script" id=13]
 [ext_resource path="res://scripts/mana_system.gd" type="Script" id=14]
 [ext_resource path="res://scripts/hitbox.gd" type="Script" id=15]
-[ext_resource path="res://prefabs/player/healing.gd" type="Script" id=16]
+[ext_resource path="res://prefabs/player/healer.gd" type="Script" id=16]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 26.0
+radius = 30.0
 height = 48.0
 
 [sub_resource type="Animation" id=7]
@@ -772,13 +772,12 @@ script = ExtResource( 12 )
 [node name="OnAir" type="Node" parent="States"]
 script = ExtResource( 13 )
 
-[node name="Mana" type="Node" parent="."]
-script = ExtResource( 14 )
-
-[node name="Healing" type="Node" parent="."]
+[node name="Healer" type="Timer" parent="."]
+one_shot = true
 script = ExtResource( 16 )
 
-[node name="Timer" type="Timer" parent="Healing"]
+[node name="Mana" type="Node" parent="."]
+script = ExtResource( 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CAST = SubResource( 7 )
