@@ -54,6 +54,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#players-control">Player's control</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inventory-system">Inventory system</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#health">Health</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#mana">Mana</a>
@@ -95,8 +97,8 @@
 in search of honing its skill to the extreme. The game will be a randomized 
 metroidvania, or roguelike that never resets, mixing of generated levels and
 exploration &amp; progression. This game is currently targeted to be a <em>desktop</em>,
-<em>singleplayer</em> game (no multiplayer, no multiplatform yet; go away feature
-freaks).</p>
+<em>singleplayer</em> game. Do note that it is always open for suggestion at <a href="https://github.com/RechieKho/ascend/issues">our github
+issues page</a>.</p>
 <h3 id="gameplay-mechanics">Gameplay / Mechanics</h3>
 <h4 id="levels">Levels</h4>
 <p>The game composes of infinite number of generated level. Each level has its own 
@@ -105,16 +107,50 @@ to defeat in order to proceed to the next level. The map of the level will be
 vast so the player will need to venture and explore the terrain to hunt down the 
 boss enemy. </p>
 <h4 id="players-control">Player's control</h4>
-<p>The player can move like a normal 2D platformer (walks left &amp; right, single
-jump). The player can also do basic attack for all 4 direction (up, down, left
-and right). Hitting enemies, projectiles and some terrain downward sends the 
-player upward.</p>
+<p>Initially, there will be keys bind to these inputs:
+- Left
+- Right
+- Up
+- Down
+- Jump
+- Dash
+- Focus (holding down the key)
+- Basic attack
+- Skill cast 1
+- Skill cast 2</p>
+<p>When editing moveset, the player can bind to these keys (combination):
+- Skill cast N
+- Up + Skill cast N
+- Down + Skill cast N
+- Dash + Skill cast N</p>
+<p>Where N in Skill cast N is either 1 or 2. The rest of the keys (combination) will
+be reserved and cannot be bind to any skill (for instances, Left key will only move to left).</p>
+<p>The player can move like a normal 2D platformer (walks left &amp; right using Left &amp;
+right key, single jump with Jump key):
+- Walk to left (Left key)
+- Walk to right (Right key)
+- Jump (Jump key)</p>
+<p>The player can look up or down (move the viewport up or down):
+- Look up (Holding Up key)
+- Look down (Holding Down key)</p>
+<p>The player can interact with NPC or pickable item using Up key.</p>
+<p>The player can also do basic attack for all 4 direction:
+- Attack direction the player is facing (Basic attack key)
+- Attack upward (Up key + Basic attack key)
+- Attack downward (Down key + Basic attack key)</p>
+<p>Hitting enemies, projectiles and some terrain downward sends the player upward.</p>
+<h4 id="inventory-system">Inventory system</h4>
+<p>After you pick up a pickable item, it will be stored in this inventory system. 
+The item stored will be used to do quest and unlock special interaction with NPC.</p>
 <h4 id="health">Health</h4>
 <p>The player will have interger amount of health and damage received will cost 1
 to 3 health depending on the damage. The player can use mana to restore health
-through focusing.</p>
+through focusing (holding <code>focus</code> key).</p>
 <p>Since the levels are vast, there will be checkpoints scattered across the level.
-On death, player will be respawned to the last checkpoint.</p>
+On death, player will be respawned to the last checkpoint. The player will lost
+part of the items in the inventory system. There will left a shell at the location 
+the player died, in which the player can collect back the items by breaking the
+shell.</p>
 <h4 id="mana">Mana</h4>
 <p>Hitting enemies or some special object gains mana. The player will no longer receive
 mana if the mana is maxed out. </p>
@@ -123,6 +159,8 @@ mana if the mana is maxed out. </p>
 skill system in which the player can defines its moveset (or skill set) from the
 list of skills acquired from defeating bosses. Each skill will have its own
 cooldown and mana cost. The player can only edit moveset at the checkpoints.</p>
+<p>By editing moveset, the player can bind certain key input or key input combination
+to the skill obtained.</p>
 <p>If you have any uncertainty or suggestion, please <a href="https://github.com/RechieKho/ascend/issues">open an issue</a>.</p>
               
             </div>
