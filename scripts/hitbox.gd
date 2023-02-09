@@ -6,6 +6,8 @@ signal on_dead
 signal on_hit(new_hitpoint, impulse)
 
 export(int, 0, 100) var max_hitpoints := 10
+export(int, 0, 100) var mana_produced := 0
+
 export(NodePath) var subject_path := "../"
 
 onready var subject := get_node(subject_path) as Node2D
