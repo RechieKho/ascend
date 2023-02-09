@@ -5,7 +5,7 @@ It is about a tortoise wanderers travel across the vast, never-ending world,
 in search of honing its skill to the extreme. The game will be a randomized 
 metroidvania, or roguelike that never resets, mixing of generated levels and
 exploration & progression. This game is currently targeted to be a *desktop*,
-*singleplayer* game. Do note that it is always open for suggestion at [our github
+*singleplayer- game. Do note that it is always open for suggestion at [our github
 issues page](https://github.com/RechieKho/ascend/issues).
 
 
@@ -19,42 +19,47 @@ boss enemy.
 
 #### Player's control
 Initially, there will be keys bind to these inputs:
-- Left
-- Right
-- Up
-- Down
-- Jump
-- Dash
-- Focus (holding down the key)
-- Basic attack
-- Skill cast 1
-- Skill cast 2
+
+- `Left`
+- `Right`
+- `Up`
+- `Down`
+- `Jump`
+- `Dash`
+- `Heal` (holding down the key)
+- `Basic attack`
+- `Skill cast 1`
+- `Skill cast 2`
 
 When editing moveset, the player can bind to these keys (combination):
-- Skill cast N
-- Up + Skill cast N
-- Down + Skill cast N
-- Dash + Skill cast N
 
-Where N in Skill cast N is either 1 or 2. The rest of the keys (combination) will
-be reserved and cannot be bind to any skill (for instances, Left key will only move to left).
+- `Skill Cast N`
+- `Up` + `Skill Cast N`
+- `Down` + `Skill Cast N`
+- `Dash` + `Skill Cast N`
 
-The player can move like a normal 2D platformer (walks left & right using Left &
-right key, single jump with Jump key):
-- Walk to left (Left key)
-- Walk to right (Right key)
-- Jump (Jump key)
+Where N in `Skill Cast N` is either `1` or `2`. The rest of the keys (combination) will
+be reserved and cannot be bind to any skill (for instances, `Left` key will only move to left).
+
+The player can move like a normal 2D platformer (walks left & right using `Left` &
+right key, single jump with `Jump` key):
+
+- Walk to left (`Left` key)
+- Walk to right (`Right` key)
+- Jump (`Jump` key)
 
 The player can look up or down (move the viewport up or down):
-- Look up (Holding Up key)
-- Look down (Holding Down key)
 
-The player can interact with NPC or pickable item using Up key.
+- Look up (Holding `Up` key)
+- Look down (Holding `Down` key)
+
+The player can interact with NPC or pickable item using `Up` key.
 
 The player can also do basic attack for all 4 direction:
-- Attack direction the player is facing (Basic attack key)
-- Attack upward (Up key + Basic attack key)
-- Attack downward (Down key + Basic attack key)
+
+- Attack direction the player is facing (`Basic attack` key)
+- Attack upward (`Up` key + `Basic attack` key)
+- Attack downward (`Down` key + `Basic attack` key)
 
 Hitting enemies, projectiles and some terrain downward sends the player upward.
 
@@ -65,7 +70,7 @@ The item stored will be used to do quest and unlock special interaction with NPC
 #### Health
 The player will have interger amount of health and damage received will cost 1
 to 3 health depending on the damage. The player can use mana to restore health
-through focusing (holding `focus` key).
+through healing (holding `Heal` key).
 
 Since the levels are vast, there will be checkpoints scattered across the level.
 On death, player will be respawned to the last checkpoint. The player will lost
