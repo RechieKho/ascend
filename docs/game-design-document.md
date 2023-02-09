@@ -5,7 +5,7 @@ It is about a tortoise wanderers travel across the vast, never-ending world,
 in search of honing its skill to the extreme. The game will be a randomized 
 metroidvania, or roguelike that never resets, mixing of generated levels and
 exploration & progression. This game is currently targeted to be a *desktop*,
-*singleplayer- game. Do note that it is always open for suggestion at [our github
+*singleplayer* game. Do note that it is always open for suggestion at [our github
 issues page](https://github.com/RechieKho/ascend/issues).
 
 
