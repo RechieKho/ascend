@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Stuffs to know to contribute - Ascend</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Stuffs to know to contribute";
+        var mkdocs_page_input_path = "contribute.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Ascend
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Get involved</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../game-design-document/">Game design document</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Stuffs to know to contribute</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-style-and-best-practices">Code style and best practices</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#codes">Codes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#naming-things">Naming things</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-structure">Project structure</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Ascend</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Get involved &raquo;</li>
+      <li>Stuffs to know to contribute</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="stuffs-to-know-to-contribute">Stuffs to know to contribute</h1>
+<p>Here you will find the guidelines to contribute to this project.</p>
+<h3 id="workflow">Workflow</h3>
+<p>This is how we work: </p>
+<ol>
+<li>I turn tasks to be done as <a href="https://github.com/RechieKho/ascend/issues">issues</a>.</li>
+<li>You (a kind person) check out the issues and deal with the issues with the tag <code>deal with me first</code>.</li>
+<li>After completing the issue, send a pull request. </li>
+<li>I will review it. If cool, I accept. If not, I'll tell you why.</li>
+</ol>
+<p>This is it! Do be patient when waiting for my respond. Note that pull request that is not directly link to an issue <em>won't be prioritized</em>.</p>
+<h3 id="code-style-and-best-practices">Code style and best practices</h3>
+<h4 id="codes">Codes</h4>
+<p>For codes, I would like to emphasize these things: </p>
+<ul>
+<li><strong>KISS</strong>, <strong>Keep it super simple</strong>.</li>
+<li>Don't add unnecessary nodes.</li>
+<li><a href="https://en.m.wikipedia.org/wiki/Single-responsibility_principle">Single-responsibility principle</a>.</li>
+<li>Reduce the usage of <code>connect</code> and instead connect signal in the scene.</li>
+<li>Be a never-nester, utilize early return.</li>
+</ul>
+<h4 id="naming-things">Naming things</h4>
+<p>For naming things:</p>
+<table>
+<thead>
+<tr>
+<th>Entity type</th>
+<th>Naming style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>files and folders</td>
+<td>In <code>kebab-case</code>.</td>
+</tr>
+<tr>
+<td>methods</td>
+<td>In <code>snake_case</code>. Start with a verb unless it is a callback</td>
+</tr>
+<tr>
+<td>signal</td>
+<td>In <code>snake_case</code>. Start with <code>on</code> and the event happend in past tense. (<code>on_player_healed</code>)</td>
+</tr>
+<tr>
+<td>variable</td>
+<td>In <code>snake_case</code>.</td>
+</tr>
+<tr>
+<td>class name</td>
+<td>In <code>PascalCase</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="project-structure">Project structure</h4>
+<p>For project structure &amp; where to store what:</p>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>File stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefabs</td>
+<td>Scenes that will be reused across scenes. The scripts that are only for that particular scene should be stored together.</td>
+</tr>
+<tr>
+<td>scenes</td>
+<td>The main scenes for the game. The scripts that are only for that particular scene should be stored together.</td>
+</tr>
+<tr>
+<td>graphics</td>
+<td>All the graphical assets.</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td>Script that will be reused across scenes. It usually either will have its class name or an autoload.</td>
+</tr>
+<tr>
+<td>docs</td>
+<td>Stores all the documentations in markdown format.</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../game-design-document/" class="btn btn-neutral float-left" title="Game design document"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../game-design-document/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
