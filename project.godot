@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Mana",
 "language": "GDScript",
-"path": "res://scripts/mana_system.gd"
+"path": "res://prefabs/player/mana.gd"
 }, {
 "base": "Node",
 "class": "State",
