@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/staff-silhouette.png-16b0d96b21701abd34c93b1adf7fc3e8.stex"
+path="res://.import/ui-circle.png-94ae2e97372314e2ff84431eaf70736c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/player/staff-silhouette.png"
-dest_files=[ "res://.import/staff-silhouette.png-16b0d96b21701abd34c93b1adf7fc3e8.stex" ]
+source_file="res://assets/graphics/basic-ui-shapes/ui-circle.png"
+dest_files=[ "res://.import/ui-circle.png-94ae2e97372314e2ff84431eaf70736c.stex" ]
 
 [params]
 

@@ -39,6 +39,6 @@ For project structure & where to store what:
 | ----- | ----- |
 | prefabs | Scenes that will be reused across scenes. The scripts that are only for that particular scene should be stored together. |
 | scenes | The main scenes for the game. The scripts that are only for that particular scene should be stored together. |
-| graphics | All the graphical assets. |
+| assets/graphics | All the graphical assets. |
 | scripts | Script that will be reused across scenes. It usually either will have its class name or an autoload. |
 | docs | Stores all the documentations in markdown format. |

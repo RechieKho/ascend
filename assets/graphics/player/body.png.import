@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/leg-silhouette.png-f3faa5db3ac339452fed7b375c853e6b.stex"
+path="res://.import/body.png-b7f97bde88529e134342b5ede5a85470.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/player/leg-silhouette.png"
-dest_files=[ "res://.import/leg-silhouette.png-f3faa5db3ac339452fed7b375c853e6b.stex" ]
+source_file="res://assets/graphics/player/body.png"
+dest_files=[ "res://.import/body.png-b7f97bde88529e134342b5ede5a85470.stex" ]
 
 [params]
 
@@ -24,7 +24,7 @@ flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

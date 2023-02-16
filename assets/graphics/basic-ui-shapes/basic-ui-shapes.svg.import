@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.svg-f9aba1b65581648c790bb267bd347ac8.stex"
+path="res://.import/basic-ui-shapes.svg-a5cace867060001a8bbfd083da6eb407.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/player/player.svg"
-dest_files=[ "res://.import/player.svg-f9aba1b65581648c790bb267bd347ac8.stex" ]
+source_file="res://assets/graphics/basic-ui-shapes/basic-ui-shapes.svg"
+dest_files=[ "res://.import/basic-ui-shapes.svg-a5cace867060001a8bbfd083da6eb407.stex" ]
 
 [params]
 

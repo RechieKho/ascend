@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/leg.png-f39ceb2340feb8d0e15462e0e2ffd0c2.stex"
+path="res://.import/ui-rectangle.png-39dd575fa814a5997b1b2985f0c1fc29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/player/leg.png"
-dest_files=[ "res://.import/leg.png-f39ceb2340feb8d0e15462e0e2ffd0c2.stex" ]
+source_file="res://assets/graphics/basic-ui-shapes/ui-rectangle.png"
+dest_files=[ "res://.import/ui-rectangle.png-39dd575fa814a5997b1b2985f0c1fc29.stex" ]
 
 [params]
 
