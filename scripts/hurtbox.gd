@@ -8,9 +8,13 @@ export(NodePath) var subject_path := "../"
 
 onready var subject := get_node(subject_path) as Node2D
 
-func hurt():
+func hurt_all():
 	for hitbox in get_overlapping_areas():
 		if not hitbox is Hitbox: continue
-		var impulse = (hitbox.subject.global_position - subject.global_position) \
-			.normalized() * impulse_magnitude
-		hitbox.hit(hurtpoints, impulse)
+		hurt(hitbox)
+
+func hurt(hitbox: Hitbox):
+	if not hitbox is Hitbox: return
+	var impulse = (hitbox.subject.global_position - subject.global_position) \
+		.normalized() * impulse_magnitude
+	hitbox.hit(hurtpoints, impulse)

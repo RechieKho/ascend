@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/hitbox.gd" type="Script" id=1]
+[ext_resource path="res://prefabs/punching-bag/punching-bag.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Quicksand/static/Quicksand-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 1 )
+colors = PoolColorArray( 0.59375, 0.343008, 0.160034, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 19
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 64 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="PunchingBag" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -64 )
+scale = Vector2( 3.36842, 128 )
+texture = SubResource( 3 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+script = ExtResource( 1 )
+max_hitpoints = 100
+mana_produced = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( 0, -64 )
+shape = SubResource( 1 )
+
+[node name="HitpointIndicator" type="Label" parent="."]
+margin_left = -32.0
+margin_top = -128.0
+margin_right = 32.0
+custom_fonts/font = SubResource( 4 )
+text = "-100"
+align = 1
+valign = 1
+
+[connection signal="on_hit" from="Hitbox" to="." method="_on_Hitbox_on_hit"]
