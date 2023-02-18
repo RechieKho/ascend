@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://assets/graphics/player/body.png" type="Texture" id=1]
 [ext_resource path="res://assets/graphics/player/shell.png" type="Texture" id=2]
@@ -16,10 +16,134 @@
 [ext_resource path="res://prefabs/player/mana.gd" type="Script" id=14]
 [ext_resource path="res://scripts/hitbox.gd" type="Script" id=15]
 [ext_resource path="res://prefabs/player/healer.gd" type="Script" id=16]
+[ext_resource path="res://scripts/hurtbox.gd" type="Script" id=17]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 30.0
 height = 48.0
+
+[sub_resource type="Animation" id=37]
+resource_name = "BASIC ATTACK DOWN"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Graphics/Root/Staff:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.2, 0.25, 0.498 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 26, 8 ), Vector2( 72, 106 ), Vector2( 22, 190 ), Vector2( -66, 130 ), Vector2( 26, 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Graphics/Root/Staff:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.2, 0.25, 0.498 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 60.8691, 89.4933, 134.196, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Graphics/Root/Staff/BasicAttackHurtbox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.14, 0.27 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "BASIC ATTACK FORWARD"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Graphics/Root/Staff:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.25, 0.498 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 26, 8 ), Vector2( -12, 4 ), Vector2( 78, -114 ), Vector2( 156, -24 ), Vector2( 98, 78 ), Vector2( 26, 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Graphics/Root/Staff:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.25, 0.498 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -39.8478, -0.945869, 34.6342, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Graphics/Root/Staff/BasicAttackHurtbox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.09, 0.26 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "BASIC ATTACK UP"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Graphics/Root/Staff:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.2, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 26, 8 ), Vector2( -92, -98 ), Vector2( -20, -172 ), Vector2( 74, -124 ), Vector2( 26, 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Graphics/Root/Staff:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.2, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -127.616, -92.7328, -50.3948, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Graphics/Root/Staff/BasicAttackHurtbox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.14, 0.26 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=7]
 resource_name = "CAST"
@@ -627,12 +751,67 @@ tracks/6/keys = {
 "values": [ 19.7 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=9]
-animation = "CAST"
-
 [sub_resource type="AnimationNodeOneShot" id=10]
 filter_enabled = true
-filters = [ "Graphics/Staff:position", "Graphics/Staff:rotation_degrees" ]
+filters = [ "Graphics/Root/Staff/BasicAttackHurtbox:monitoring", "Graphics/Root/Staff:position", "Graphics/Root/Staff:rotation_degrees", "Graphics/Staff:position", "Graphics/Staff:rotation_degrees", "Graphics:visible" ]
+
+[sub_resource type="AnimationNodeAnimation" id=39]
+animation = "BASIC ATTACK DOWN"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "BASIC ATTACK FORWARD"
+
+[sub_resource type="AnimationNodeAnimation" id=40]
+animation = "BASIC ATTACK UP"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "CAST"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "RESET"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=36]
+"states/BASIC ATTACK DOWN/node" = SubResource( 39 )
+"states/BASIC ATTACK DOWN/position" = Vector2( -59, 170 )
+"states/BASIC ATTACK FORWARD/node" = SubResource( 29 )
+"states/BASIC ATTACK FORWARD/position" = Vector2( 211, 295 )
+"states/BASIC ATTACK UP/node" = SubResource( 40 )
+"states/BASIC ATTACK UP/position" = Vector2( -27, 295 )
+states/CAST/node = SubResource( 30 )
+states/CAST/position = Vector2( 415, 170 )
+states/RESET/node = SubResource( 31 )
+states/RESET/position = Vector2( 211, 170 )
+transitions = [ "RESET", "CAST", SubResource( 32 ), "RESET", "BASIC ATTACK FORWARD", SubResource( 33 ), "BASIC ATTACK FORWARD", "RESET", SubResource( 34 ), "CAST", "RESET", SubResource( 35 ), "RESET", "BASIC ATTACK DOWN", SubResource( 41 ), "RESET", "BASIC ATTACK UP", SubResource( 42 ), "BASIC ATTACK DOWN", "RESET", SubResource( 43 ), "BASIC ATTACK UP", "RESET", SubResource( 44 ) ]
+start_node = "RESET"
+graph_offset = Vector2( -333, 99 )
 
 [sub_resource type="AnimationNodeAnimation" id=11]
 animation = "DOWN"
@@ -671,18 +850,20 @@ states/ground/node = SubResource( 16 )
 states/ground/position = Vector2( 365.667, 281.667 )
 transitions = [ "ground", "air", SubResource( 17 ), "air", "ground", SubResource( 21 ) ]
 start_node = "ground"
-graph_offset = Vector2( -64, 90 )
+graph_offset = Vector2( 73, 68 )
 
 [sub_resource type="AnimationNodeBlendTree" id=19]
-graph_offset = Vector2( -347.208, -2.41823 )
-nodes/Animation/node = SubResource( 9 )
-nodes/Animation/position = Vector2( -106.667, 160 )
-nodes/cast_trigger/node = SubResource( 10 )
-nodes/cast_trigger/position = Vector2( 106.667, 53.3333 )
+graph_offset = Vector2( -8, -2 )
+nodes/attack_trigger/node = SubResource( 10 )
+nodes/attack_trigger/position = Vector2( 200, 0 )
+nodes/attacks/node = SubResource( 36 )
+nodes/attacks/position = Vector2( -167, 201 )
 nodes/main/node = SubResource( 18 )
-nodes/main/position = Vector2( -133.333, 26.6667 )
-nodes/output/position = Vector2( 320, 106.667 )
-node_connections = [ "cast_trigger", 0, "main", "cast_trigger", 1, "Animation", "output", 0, "cast_trigger" ]
+nodes/main/position = Vector2( -166.25, 0 )
+nodes/output/position = Vector2( 400, 0 )
+node_connections = [ "output", 0, "attack_trigger", "attack_trigger", 0, "main", "attack_trigger", 1, "attacks" ]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=28]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
@@ -753,6 +934,16 @@ texture = ExtResource( 9 )
 z_index = -1
 texture = ExtResource( 10 )
 
+[node name="BasicAttackHurtbox" type="Area2D" parent="Graphics/Root/Staff"]
+visible = false
+monitoring = false
+monitorable = false
+script = ExtResource( 17 )
+
+[node name="BasicAttackCol" type="CollisionPolygon2D" parent="Graphics/Root/Staff/BasicAttackHurtbox"]
+position = Vector2( 52, 16 )
+polygon = PoolVector2Array( -97.1481, 17.7356, 148, 160, 302.229, -25.9238, 130, -200, -96, -18 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -51 )
 shape = SubResource( 1 )
@@ -780,6 +971,10 @@ script = ExtResource( 16 )
 script = ExtResource( 14 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+"anims/BASIC ATTACK DOWN" = SubResource( 37 )
+"anims/BASIC ATTACK FORWARD" = SubResource( 22 )
+"anims/BASIC ATTACK UP" = SubResource( 38 )
 anims/CAST = SubResource( 7 )
 anims/DOWN = SubResource( 6 )
 anims/IDLE = SubResource( 2 )
@@ -790,11 +985,13 @@ anims/UP = SubResource( 5 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 process_mode = 0
-parameters/cast_trigger/active = false
+parameters/attack_trigger/active = false
+parameters/attacks/playback = SubResource( 28 )
 parameters/main/playback = SubResource( 20 )
 parameters/main/air/blend_position = 0.170034
 parameters/main/ground/blend_position = 0.00168347
 
 [node name="Listener2D" type="Listener2D" parent="."]
+
+[connection signal="area_entered" from="Graphics/Root/Staff/BasicAttackHurtbox" to="." method="_on_BasicAttackHurtbox_area_entered"]
